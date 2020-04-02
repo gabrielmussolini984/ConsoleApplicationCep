@@ -2,50 +2,42 @@
 
 Esta aplicação roda em linha de comando, tem como função buscar o CEP digitado como parâmetro e cadastrar no banco de dados.
 Outro comando valido para o script é o de listar todos dados cadastrados no banco de dados.
-![](header.png)
 
 ## Utilização Passo a Passo
->Clone o repositório:
+>Clone o repositório e instale as depêndencias do projeto:
 ```
 npm i.
 ```
->Configure as variaveis de ambiente no arquivo .env (modelo usado no .example.env):
+>renomeie o arquivo.example.env para .env e configure de acordo com seu banco de dados:
 
->Executar as Migrations:
+>Execute as Migrations para criar a tabela de dados_cep:
 ```
 knex migrate:latest
 ```
->Criar comando global 'smarkio':
+>Crie comando 'smarkio' digitando npm link no terminal:
 ```
-npm i -g .
+npm link
 ```
->Visualizar todos comandos:
+>Visualize todos comandos:
 ```
 smarkio --help
 ```
 >Buscar e Inserir Cep:
 ```
-smarkio -c 37500290
+smarkio -c 37500290 ou smarkio --cep 37500290
 ```
 >Listar Dados do Banco:
 ```
-smarkio -l
+smarkio -l ou smarkio -list
 ```
 
-## Release History
-
-* 0.0.1
-    * Work in progress
+## O Projeto
+O desafio era criar um Command Line App, para maior segurança os dados sensíveis foram salvos em variáveis de ambiente.
+Feito também as Migrations, que funciona como se fosse um histórico de alteração na base de dados, para que se o projeto fosse em equipe, todos saberem quais alterações foram feitas.
+A organização de pastas foi em MVC, a interface(CLI) manda para o controller as informações, o controller processa os dados e entrega o model fazer a inserção ou listagem do banco de dados.
 
 ## Meta
 
 Gabriel Mussolini – gabrielmussolini@hotmail.com
 
 [https://github.com/gabrielmussolini984](https://github.com/gabrielmussolini984?)
-
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics

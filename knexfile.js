@@ -1,14 +1,14 @@
+require('dotenv').config();
 // Update with your config settings.
-
 module.exports = {
 
   development: {
     client: 'mysql2',
     connection: {
-      host : 'localhost',
-      user : 'root',
-      password : '',
-      database : 'test'
+      host : process.env.DB_HOST,
+      user : process.env.DB_USER,
+      password : process.env.PASSWORD,
+      database : process.env.DB_DATABASE
     },
     migrations: {
       directory: './src/database/migrations/'

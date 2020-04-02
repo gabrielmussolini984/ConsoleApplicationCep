@@ -2,7 +2,7 @@
 const yargs = require("yargs");
 const chalk = require('chalk');
 const boxen = require('boxen');
-const Cep = require('../controllers/Cep');
+const Cep = require('./controllers/Cep');
 
 const options = yargs
  .usage("Usage: -c <cep> or -s")
