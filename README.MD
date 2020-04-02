@@ -30,6 +30,10 @@ smarkio -c 37500290 ou smarkio --cep 37500290
 ```
 smarkio -l ou smarkio -list
 ```
+>Para desinstalar o comando digite:
+```
+npm uninstall -g get-cep-command-line
+```
 
 ## O Projeto
 O desafio era criar um Command Line App, para maior segurança os dados sensíveis foram salvos em variáveis de ambiente.
