@@ -8,13 +8,13 @@ Outro comando valido para o script é o de listar todos dados cadastrados no ban
 ```
 npm i.
 ```
->renomeie o arquivo.example.env para .env e configure de acordo com seu banco de dados:
+>Renomeie o arquivo .example.env para .env e configure de acordo com seu banco de dados:
 
 >Execute as Migrations para criar a tabela de dados_cep:
 ```
 knex migrate:latest
 ```
->Crie comando 'smarkio' digitando npm link no terminal:
+>Crie o comando 'smarkio' digitando npm link no terminal:
 ```
 npm link
 ```
@@ -28,7 +28,7 @@ smarkio -c 37500290 ou smarkio --cep 37500290
 ```
 >Listar Dados do Banco:
 ```
-smarkio -l ou smarkio -list
+smarkio -l ou smarkio --list
 ```
 >Para desinstalar o comando digite:
 ```
